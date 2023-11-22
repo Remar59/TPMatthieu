@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ConsolesController;
-use App\Http\Controllers\HandHeldController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,11 +18,14 @@ use Illuminate\Support\Facades\Route;
 //Homepage principale
 Route::get('/home', [HomeController::class, 'index']);
 
+//Homepage consoles
+Route::get('/consoles', [ConsolesController::class, 'indexConsoles']);
+Route::get('/showconsoles/{id}', [ConsolesController::class, 'show']);
 
-//Homepage consoles portables
-Route::get('/consoles_portables', [HandHeldController::class, 'showHandHeld']);
+Route::get('/consoles/creer', [ConsolesController::class, 'create']);
+Route::post('/consoles/creer', [ConsolesController::class, 'store']);
 
-//Homepage consoles de salon
-Route::get('/consoles_salons', [ConsolesController::class, 'showConsoles']);
+//A propos
+Route::get('/about', [AboutController::class, 'show']);
 
 

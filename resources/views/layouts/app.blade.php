@@ -22,11 +22,8 @@
             <div class="hidden md:block" id="menu">
                 <ul class="w-screen md:flex md:w-auto items-center">
                     <li class="p-3 text-lg text-white"><a href="/home">Accueil</a></li>
-                    <li class="p-3 text-lg text-red-300 hover:text-white"><a href="/consoles_salons">Consoles de salons</a></li>
-                    <li class="p-3 text-lg text-red-300 hover:text-white"><a
-                            href="/consoles_portables">Consoles portables</a>
-                    </li>
-                    <li class="p-3 text-lg text-red-300 hover:text-white"><a href="#">A propos</a></li>
+                    <li class="p-3 text-lg text-red-300 hover:text-white"><a href="/consoles">Consoles </a></li>
+                    <li class="p-3 text-lg text-red-300 hover:text-white"><a href="/about">A propos</a></li>
                     <li id="drp-btn" class="text-red-300 hover:text-white">
                         </div>
                     </li>
@@ -38,6 +35,11 @@
 @yield('content')
 
     <script src="/static_files/js/nav.js"></script>
+    <footer class="bg-[#DB3748] text-gray-300 py-8">
+        <div class="max-w-5xl mx-auto px-3">
+            <p class="text-center text-xl">GameCollection &copy; {{ date('Y') }}</p>
+        </div>
+    </footer>
 </body>
 
 </html>
