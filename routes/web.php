@@ -25,6 +25,8 @@ Route::get('/showconsoles/{id}', [ConsolesController::class, 'show']);
 Route::get('/consoles/creer', [ConsolesController::class, 'create']);
 Route::post('/consoles/creer', [ConsolesController::class, 'store']);
 
+Route::get('/consoles/{id}/supprimer', [ConsolesController::class, 'destroy']);
+
 //A propos
 Route::get('/about', [AboutController::class, 'show']);
 
